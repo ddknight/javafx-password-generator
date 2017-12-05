@@ -4,6 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cc.ddknight.app</groupId>
 	<artifactId>javafx-password-generator</artifactId>
+	<packaging>jar</packaging>
 	<version>1.0.0</version>
 	<properties>
 		<!-- Project Configuration Version -->
@@ -13,12 +14,12 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<build>
-		<finalName>javafx-password-generator-${project.version}</finalName>
+		<finalName>javafx-password-generator</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.4.3</version>
+				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -36,11 +37,10 @@
 					</execution>
 				</executions>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>3.7.0</version>
 				<configuration>
 					<verbose />
 					<compilerArgs>

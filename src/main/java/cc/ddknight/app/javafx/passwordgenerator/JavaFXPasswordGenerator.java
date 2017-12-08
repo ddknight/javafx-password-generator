@@ -45,7 +45,7 @@ public class JavaFXPasswordGenerator extends Application {
         button.setOnAction(ActionEvent ->{
         		String newPassword = Password.genRandomNum(8);
         		System.out.println(StringResource.PASSWORD_MESSAGE + newPassword);
-				textField.setText(StringResource.PASSWORD_MESSAGE + newPassword);
+				textField.setText(newPassword);
             }
         );
         grid.add(button, 2, 1);

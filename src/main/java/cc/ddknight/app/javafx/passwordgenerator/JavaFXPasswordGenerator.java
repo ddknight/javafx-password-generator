@@ -15,13 +15,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
- * <p>
- * 
- * </p>
- * <font size=0.25>Copyright (C) 2016 Ouyeel. All Rights Reserved.</font>
- * @author Chao.CHEN (Create on:2016年11月18日)
- * @version 1.0
- * @fileName JavaFXPasswordGenerator.java
+ * @author ddknight
  */
 public class JavaFXPasswordGenerator extends Application {
 

@@ -13,13 +13,22 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+	<dependencies>
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>jfxrt</artifactId>
+            <version>${java.version}</version>
+            <scope>system</scope>
+            <systemPath>${java.home}/lib/ext/jfxrt.jar</systemPath>
+        </dependency>
+    </dependencies>
 	<build>
 		<finalName>javafx-password-generator</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.1.0</version>
+				<version>3.2.1</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -36,22 +45,6 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.7.0</version>
-				<configuration>
-					<verbose />
-					<compilerArgs>
-						<arg>-Xlint:unchecked</arg>
-						<arg>-Xlint:deprecation</arg>
-						<arg>-bootclasspath</arg>
-						<arg>${env.JAVA_HOME}/jre/lib/rt.jar</arg>
-						<arg>-extdirs</arg>
-						<arg>${project.basedir}/lib</arg>
-					</compilerArgs>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
